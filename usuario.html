@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="usuario.css">
+</head>
+
+<body>
+
+    <!-- aqi el usuario elegira sus preferencias  -->
+    <header class="header">
+
+        <div class="logo">
+            <h1>Piterest proyecto</h1><!-- nombre momentaneo hasta elegir el nombre final  -->
+        </div>
+
+        <div class="settings">
+
+            <button class="settings-btn" onclick="toggleMenu()">Configuración</button>
+
+            <div class="settings-menu" id="settingsMenu">
+
+                <label>
+                    <input type="checkbox">
+                    Mostrar contenido para adultos
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    Perfil privado
+                </label>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- foto de perfil xd -->
+    <section class="perfil">
+
+        <div class="foto-perfil">
+            <img src=" " alt="Foto de perfil">
+        </div>
+
+    </section>
+
+    <section class="publicaciones">
+
+        <!-- aqui el usuario vera las imagnes que suba  -->
+        <h2>Mis publicaciones</h2>
+
+        <div class="galeria">
+
+            <div class="post">
+                <img src=" " alt="Publicación">
+            </div>
+
+            <div class="post">
+                <img src=" " alt="Publicación">
+            </div>
+
+            <div class="post">
+                <img src=" " alt="Publicación">
+            </div>
+
+            <div class="post">
+                <img src=" " alt="Publicación">
+            </div>
+
+            <div class="post">
+                <img src=" " alt="Publicación">
+            </div>
+
+            <div class="post">
+                <img src=" " alt="Publicación">
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu = document.getElementById("settingsMenu");
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Piterest proyecto</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- header principal con busqueda y categorias -->
+    <header class="header">
+
+        <div class="logo">
+            <h1>Piterest proyecto</h1>
+        </div>
+
+        <div class="buscador">
+            <input type="text" id="busqueda" placeholder="Buscar imágenes, ideas...">
+        </div>
+
+        <div class="nav">
+            <a href="login.html">Iniciar sesión</a>
+            <a href="register.html">Registrarse</a>
+        </div>
+
+    </header>
+
+    <!-- barra de categorias para filtrar contenido -->
+    <section class="categorias">
+
+        <button class="categoria-btn">Todo</button>
+        <button class="categoria-btn">Arte</button>
+        <button class="categoria-btn">Fotografía</button>
+        <button class="categoria-btn">Diseño</button>
+        <button class="categoria-btn">Naturaleza</button>
+        <button class="categoria-btn">Tecnología</button>
+        <button class="categoria-btn">Comida</button>
+        <button class="categoria-btn">Viajes</button>
+
+    </section>
+
+    <!-- mosaico principal de imagenes tipo pinterest -->
+    <main class="main-content">
+
+        <div class="galeria">
+
+            <!-- estas imagenes son placeholders, despues se conectaran con S3 -->
+            <div class="post" onclick="irADetalle()">
+                <img src="https://via.placeholder.com/300x400/7b2cbf/ffffff?text=Imagen+1" alt="Publicación">
+                <div class="post-info">
+                    <h3>Arte abstracto</h3>
+                    <p>usuario1</p>
+                </div>
+            </div>
+
+            <div class="post" onclick="irADetalle()">
+                <img src="https://via.placeholder.com/300x500/9d4edd/ffffff?text=Imagen+2" alt="Publicación">
+                <div class="post-info">
+                    <h3>Paisaje natural</h3>
+                    <p>usuario2</p>
+                </div>
+            </div>
+
+            <div class="post" onclick="irADetalle()">
+                <img src="https://via.placeholder.com/300x350/c77dff/ffffff?text=Imagen+3" alt="Publicación">
+                <div class="post-info">
+                    <h3>Diseño moderno</h3>
+                    <p>usuario3</p>
+                </div>
+            </div>
+
+            <div class="post" onclick="irADetalle()">
+                <img src="https://via.placeholder.com/300x450/7b2cbf/ffffff?text=Imagen+4" alt="Publicación">
+                <div class="post-info">
+                    <h3>Fotografía urbana</h3>
+                    <p>usuario4</p>
+                </div>
+            </div>
+
+            <div class="post" onclick="irADetalle()">
+                <img src="https://via.placeholder.com/300x380/9d4edd/ffffff?text=Imagen+5" alt="Publicación">
+                <div class="post-info">
+                    <h3>Comida gourmet</h3>
+                    <p>usuario5</p>
+                </div>
+            </div>
+
+            <div class="post" onclick="irADetalle()">
+                <img src="https://via.placeholder.com/300x420/c77dff/ffffff?text=Imagen+6" alt="Publicación">
+                <div class="post-info">
+                    <h3>Viajes increíbles</h3>
+                    <p>usuario6</p>
+                </div>
+            </div>
+
+            <div class="post" onclick="irADetalle()">
+                <img src="https://via.placeholder.com/300x400/7b2cbf/ffffff?text=Imagen+7" alt="Publicación">
+                <div class="post-info">
+                    <h3>Tecnología futurista</h3>
+                    <p>usuario7</p>
+                </div>
+            </div>
+
+            <div class="post" onclick="irADetalle()">
+                <img src="https://via.placeholder.com/300x360/9d4edd/ffffff?text=Imagen+8" alt="Publicación">
+                <div class="post-info">
+                    <h3>Naturaleza salvaje</h3>
+                    <p>usuario8</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+
+        // funcion para ir al detalle de la publicacion
+        function irADetalle() {
+            window.location.href = "detalle.html";
+        }
+
+        // filtrado por categorias (basico por ahora)
+        const botonesCategoria = document.querySelectorAll('.categoria-btn');
+        
+        botonesCategoria.forEach(boton => {
+            boton.addEventListener('click', function() {
+                // aqui se implementaria la logica de filtrado
+                console.log('Categoria seleccionada:', this.textContent);
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
